@@ -127,6 +127,7 @@ header p {
 
 .mode-icon.spell { background: linear-gradient(135deg, #f093fb, #f5576c); }
 .mode-icon.read  { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.mode-icon.story { background: linear-gradient(135deg, #f6d365, #fda085); }
 
 .mode-info h2 {
   font-size: 1.3rem;

@@ -1,0 +1,35 @@
+{
+  "category": "School Stories",
+  "icon": "🏫",
+  "difficulty": "easy",
+  "stories": [
+    {
+      "title": "My Teacher",
+      "sentences": [
+        "My teacher is nice.",
+        "She reads us a book.",
+        "We sit and we listen.",
+        "I like my teacher."
+      ],
+      "fillBlanks": [
+        { "sentence": "My teacher is ___.", "answer": "nice" },
+        { "sentence": "She reads us a ___.", "answer": "book" },
+        { "sentence": "I ___ my teacher.", "answer": "like" }
+      ]
+    },
+    {
+      "title": "Lunch Time",
+      "sentences": [
+        "It is time to eat.",
+        "I have a sandwich.",
+        "I have milk to drink.",
+        "Lunch is my favorite."
+      ],
+      "fillBlanks": [
+        { "sentence": "It is time to ___.", "answer": "eat" },
+        { "sentence": "I have a ___.", "answer": "sandwich" },
+        { "sentence": "I have milk to ___.", "answer": "drink" }
+      ]
+    }
+  ]
+}

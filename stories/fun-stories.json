@@ -1,0 +1,49 @@
+{
+  "category": "Fun Stories",
+  "icon": "🎈",
+  "difficulty": "easy",
+  "stories": [
+    {
+      "title": "The Red Ball",
+      "sentences": [
+        "I have a red ball.",
+        "I can kick the ball.",
+        "The ball went up high.",
+        "The ball came back down."
+      ],
+      "fillBlanks": [
+        { "sentence": "I have a red ___.", "answer": "ball" },
+        { "sentence": "I can ___ the ball.", "answer": "kick" },
+        { "sentence": "The ball went up ___.", "answer": "high" }
+      ]
+    },
+    {
+      "title": "My Big Box",
+      "sentences": [
+        "I found a big box.",
+        "I got in the box.",
+        "The box is my ship.",
+        "I sail on the sea."
+      ],
+      "fillBlanks": [
+        { "sentence": "I found a big ___.", "answer": "box" },
+        { "sentence": "The box is my ___.", "answer": "ship" },
+        { "sentence": "I sail on the ___.", "answer": "sea" }
+      ]
+    },
+    {
+      "title": "A Fun Day",
+      "sentences": [
+        "The sun is out today.",
+        "We go to the park.",
+        "We run and we play.",
+        "It is a fun day."
+      ],
+      "fillBlanks": [
+        { "sentence": "The ___ is out today.", "answer": "sun" },
+        { "sentence": "We go to the ___.", "answer": "park" },
+        { "sentence": "It is a ___ day.", "answer": "fun" }
+      ]
+    }
+  ]
+}

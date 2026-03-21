@@ -1,0 +1,47 @@
+{
+  "category": "Animal Stories",
+  "icon": "🐻",
+  "difficulty": "easy",
+  "stories": [
+    {
+      "title": "The Big Cat",
+      "sentences": [
+        "The cat sat on the mat.",
+        "The cat is big and fat.",
+        "The cat can nap all day."
+      ],
+      "fillBlanks": [
+        { "sentence": "The cat sat on the ___.", "answer": "mat" },
+        { "sentence": "The cat is big and ___.", "answer": "fat" },
+        { "sentence": "The cat can ___ all day.", "answer": "nap" }
+      ]
+    },
+    {
+      "title": "The Red Hen",
+      "sentences": [
+        "The red hen has an egg.",
+        "The egg is in the nest.",
+        "The hen sits on the egg."
+      ],
+      "fillBlanks": [
+        { "sentence": "The red hen has an ___.", "answer": "egg" },
+        { "sentence": "The egg is in the ___.", "answer": "nest" },
+        { "sentence": "The hen ___ on the egg.", "answer": "sits" }
+      ]
+    },
+    {
+      "title": "The Dog and the Frog",
+      "sentences": [
+        "The dog saw a frog.",
+        "The frog sat on a log.",
+        "The dog ran to the frog.",
+        "The frog jumped in the pond."
+      ],
+      "fillBlanks": [
+        { "sentence": "The dog saw a ___.", "answer": "frog" },
+        { "sentence": "The frog sat on a ___.", "answer": "log" },
+        { "sentence": "The frog jumped in the ___.", "answer": "pond" }
+      ]
+    }
+  ]
+}
