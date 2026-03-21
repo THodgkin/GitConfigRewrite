@@ -1,0 +1,16 @@
+{
+  "category": "Sight Words",
+  "icon": "👀",
+  "words": [
+    { "word": "the", "hint": "Used before a noun" },
+    { "word": "and", "hint": "Joins two things together" },
+    { "word": "is", "hint": "The cat ___ big" },
+    { "word": "it", "hint": "Use ___ instead of a name" },
+    { "word": "in", "hint": "The ball is ___ the box" },
+    { "word": "you", "hint": "I see ___!" },
+    { "word": "to", "hint": "I want ___ go" },
+    { "word": "can", "hint": "I ___ do it!" },
+    { "word": "we", "hint": "___ are friends" },
+    { "word": "my", "hint": "This is ___ toy" }
+  ]
+}

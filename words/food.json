@@ -1,0 +1,16 @@
+{
+  "category": "Food",
+  "icon": "🍎",
+  "words": [
+    { "word": "apple", "hint": "A round red fruit" },
+    { "word": "cake", "hint": "You eat it on your birthday" },
+    { "word": "milk", "hint": "A white drink from a cow" },
+    { "word": "egg", "hint": "You crack it to cook it" },
+    { "word": "bread", "hint": "You make sandwiches with it" },
+    { "word": "rice", "hint": "Small white grains you cook" },
+    { "word": "corn", "hint": "Yellow vegetable on a cob" },
+    { "word": "pie", "hint": "A baked treat with filling" },
+    { "word": "jam", "hint": "Sweet spread for toast" },
+    { "word": "nut", "hint": "A small crunchy snack" }
+  ]
+}

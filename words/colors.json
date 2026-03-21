@@ -1,0 +1,16 @@
+{
+  "category": "Colors",
+  "icon": "🌈",
+  "words": [
+    { "word": "red", "hint": "The color of an apple" },
+    { "word": "blue", "hint": "The color of the sky" },
+    { "word": "green", "hint": "The color of grass" },
+    { "word": "yellow", "hint": "The color of the sun" },
+    { "word": "pink", "hint": "The color of a flamingo" },
+    { "word": "orange", "hint": "The color of a carrot" },
+    { "word": "purple", "hint": "The color of grapes" },
+    { "word": "black", "hint": "The color of night" },
+    { "word": "white", "hint": "The color of snow" },
+    { "word": "brown", "hint": "The color of chocolate" }
+  ]
+}

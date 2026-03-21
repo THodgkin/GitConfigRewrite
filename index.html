@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Buddy - Learn to Read & Spell!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Word Buddy</h1>
+    <p>Learn to read and spell!</p>
+  </header>
+
+  <!-- HOME SCREEN -->
+  <div id="screen-home" class="screen active">
+    <div class="mode-buttons">
+      <button class="mode-btn" id="spell-mode-btn">
+        <span class="mode-icon spell">🔊</span>
+        <div class="mode-info">
+          <h2>Hear & Spell</h2>
+          <p>Listen to a word, then type it!</p>
+        </div>
+      </button>
+      <button class="mode-btn" id="read-mode-btn">
+        <span class="mode-icon read">🎤</span>
+        <div class="mode-info">
+          <h2>Read Aloud</h2>
+          <p>See a word, then say it out loud!</p>
+        </div>
+      </button>
+    </div>
+    <div id="no-speech-warning" class="no-speech-warning" style="display:none">
+      Note: Your browser may not support speech recognition for "Read Aloud" mode.
+      Chrome works best!
+    </div>
+  </div>
+
+  <!-- CATEGORY PICKER -->
+  <div id="screen-categories" class="screen">
+    <h2 id="category-title" style="color:#fff; text-align:center; font-size:1.5rem; margin-bottom:10px;">
+      Pick a category!
+    </h2>
+    <div id="category-grid" class="category-grid"></div>
+    <button class="hint-btn" onclick="App.goHome()" style="display:block; margin:20px auto 0;">
+      ← Back Home
+    </button>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="screen-game" class="screen">
+    <div class="game-top-bar">
+      <button class="back-btn" id="back-btn">←</button>
+      <span class="progress-info" id="progress-info">1 / 10</span>
+      <span class="score-display" id="score-display">0 ⭐</span>
+    </div>
+
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill" id="progress-fill"></div>
+    </div>
+
+    <h2 id="game-title" style="color:#fff; text-align:center; margin-bottom:16px; font-size:1.4rem;">
+      Hear & Spell
+    </h2>
+
+    <div class="game-card">
+      <!-- Word display (shown in Read mode) -->
+      <div class="word-display" id="word-display"></div>
+
+      <!-- Spell mode area -->
+      <div id="spell-area" style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+        <button class="speak-btn" id="speak-btn" title="Hear the word">🔊</button>
+        <input type="text" class="spell-input" id="spell-input"
+               placeholder="type here" autocomplete="off" autocapitalize="none" spellcheck="false">
+        <button class="action-btn check-btn" id="check-btn">Check!</button>
+      </div>
+
+      <!-- Read mode area -->
+      <div id="read-area" style="display:none; flex-direction:column; align-items:center; gap:16px;">
+        <button class="mic-btn" id="mic-btn" title="Start talking">🎤</button>
+        <p class="heard-text" id="heard-text">Tap the microphone and read the word!</p>
+      </div>
+
+      <p class="hint-text" id="hint-text"></p>
+    </div>
+
+    <button class="hint-btn" id="hint-btn">💡 Show Hint</button>
+  </div>
+
+  <!-- FEEDBACK OVERLAY -->
+  <div class="feedback" id="feedback">
+    <div class="feedback-content">
+      <div class="feedback-emoji" id="feedback-emoji">🌟</div>
+      <div class="feedback-text" id="feedback-text">Amazing!</div>
+      <button class="action-btn next-btn" id="feedback-btn">Next Word</button>
+    </div>
+  </div>
+
+  <!-- RESULTS SCREEN -->
+  <div id="screen-results" class="screen">
+    <div class="results-card">
+      <div class="big-emoji" id="results-emoji">🏆</div>
+      <h2 id="results-title">Great Job!</h2>
+      <p class="score-text" id="results-score">You got 8 out of 10!</p>
+      <div class="stars" id="results-stars">⭐⭐⭐</div>
+      <div class="results-actions">
+        <button class="action-btn replay-btn" id="replay-btn">Play Again</button>
+        <button class="action-btn home-btn" id="home-btn">Home</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

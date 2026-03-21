@@ -1,0 +1,16 @@
+{
+  "category": "Animals",
+  "icon": "🐾",
+  "words": [
+    { "word": "cat", "hint": "A furry pet that says meow" },
+    { "word": "dog", "hint": "A furry pet that says woof" },
+    { "word": "fish", "hint": "It swims in water" },
+    { "word": "bird", "hint": "It has wings and can fly" },
+    { "word": "frog", "hint": "It hops and says ribbit" },
+    { "word": "duck", "hint": "It swims and says quack" },
+    { "word": "pig", "hint": "It says oink oink" },
+    { "word": "cow", "hint": "It says moo and gives us milk" },
+    { "word": "hen", "hint": "It lays eggs" },
+    { "word": "ant", "hint": "A tiny bug that works hard" }
+  ]
+}
