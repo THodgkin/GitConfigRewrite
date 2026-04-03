@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Press Start 2P', monospace;
+}
+
+.device {
+    background: linear-gradient(145deg, #e8d44d, #f7e96e);
+    border-radius: 30px 30px 40px 40px;
+    padding: 20px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    width: 380px;
+    position: relative;
+}
+
+.device-top {
+    text-align: center;
+    padding: 8px 0 12px;
+}
+
+.device-logo {
+    font-size: 14px;
+    color: #c4383888;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.screen-frame {
+    background: #8b8b7a;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.screen {
+    background: #c4cfa1;
+    border-radius: 8px;
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    image-rendering: pixelated;
+}
+
+.screen-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Start screen */
+.egg-animation {
+    font-size: 64px;
+    animation: wobble 1s ease-in-out infinite;
+}
+
+@keyframes wobble {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+.blink-text {
+    font-size: 8px;
+    color: #4a5240;
+    margin-top: 20px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Name screen */
+#name-screen p {
+    font-size: 9px;
+    color: #4a5240;
+    margin-bottom: 12px;
+}
+
+#pet-name-input {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    padding: 8px 12px;
+    border: 2px solid #4a5240;
+    background: #d4dfa8;
+    color: #4a5240;
+    text-align: center;
+    width: 180px;
+    outline: none;
+    border-radius: 4px;
+}
+
+.pixel-btn {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    padding: 8px 20px;
+    margin-top: 12px;
+    background: #4a5240;
+    color: #c4cfa1;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.1s;
+}
+
+.pixel-btn:hover {
+    transform: scale(1.05);
+}
+
+.pixel-btn:active {
+    transform: scale(0.95);
+}
+
+/* Game screen */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 7px;
+    color: #4a5240;
+    padding: 4px 8px;
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+.pet-area {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.pet {
+    font-size: 64px;
+    transition: transform 0.3s;
+    animation: idle 2s ease-in-out infinite;
+}
+
+@keyframes idle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+.pet.sleeping {
+    animation: sleep 3s ease-in-out infinite;
+}
+
+@keyframes sleep {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(2px) scale(0.97); }
+}
+
+.pet.sick {
+    animation: sick 0.5s ease-in-out infinite;
+    filter: hue-rotate(90deg);
+}
+
+@keyframes sick {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+.pet.eating {
+    animation: eat 0.3s ease-in-out 3;
+}
+
+@keyframes eat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.pet.playing {
+    animation: play 0.4s ease-in-out 4;
+}
+
+@keyframes play {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    25% { transform: translateY(-15px) rotate(10deg); }
+    75% { transform: translateY(-15px) rotate(-10deg); }
+}
+
+.reaction {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.reaction.show {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.poop {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    font-size: 28px;
+    animation: poop-appear 0.3s ease-out;
+}
+
+@keyframes poop-appear {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+.stats {
+    width: 100%;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-icon {
+    font-size: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+.stat-bar {
+    flex: 1;
+    height: 10px;
+    background: #a1aa82;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid #4a5240;
+}
+
+.stat-fill {
+    height: 100%;
+    background: #4a5240;
+    transition: width 0.5s ease;
+    border-radius: 1px;
+}
+
+.stat-fill.low {
+    background: #8a4240;
+    animation: pulse-bar 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse-bar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.mood-text {
+    font-size: 7px;
+    color: #4a5240;
+    margin-top: 6px;
+    height: 12px;
+    position: absolute;
+    bottom: 6px;
+}
+
+/* Death screen */
+.death-icon {
+    font-size: 64px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#death-screen p {
+    font-size: 8px;
+    color: #4a5240;
+    margin: 16px 0;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 4px 0;
+}
+
+.device-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(145deg, #d4a030, #b8882a);
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.device-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+}
+
+.device-btn:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.device-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.button-labels {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 4px 0 8px;
+}
+
+.button-labels span {
+    width: 48px;
+    text-align: center;
+    font-size: 5px;
+    color: #8a6520;
+}
+
+/* Night mode */
+.screen.night {
+    background: #2a2d24;
+}
+
+.screen.night .stat-bar {
+    background: #3a3d34;
+}
+
+.screen.night .stat-fill {
+    background: #8a9a6a;
+}
+
+.screen.night .status-bar,
+.screen.night .mood-text,
+.screen.night #name-screen p {
+    color: #8a9a6a;
+}
