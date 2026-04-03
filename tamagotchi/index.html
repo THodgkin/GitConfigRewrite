@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="device">
+        <div class="device-top">
+            <div class="device-logo">TAMAGOTCHI</div>
+        </div>
+        <div class="screen-frame">
+            <div class="screen" id="screen">
+                <!-- Start screen -->
+                <div id="start-screen" class="screen-content">
+                    <div class="egg-animation">🥚</div>
+                    <p class="blink-text">Press START to hatch!</p>
+                </div>
+
+                <!-- Name screen -->
+                <div id="name-screen" class="screen-content hidden">
+                    <p>Name your pet:</p>
+                    <input type="text" id="pet-name-input" maxlength="10" placeholder="Enter name...">
+                    <button id="confirm-name-btn" class="pixel-btn">OK</button>
+                </div>
+
+                <!-- Game screen -->
+                <div id="game-screen" class="screen-content hidden">
+                    <div class="status-bar">
+                        <span id="pet-name-display">Pet</span>
+                        <span id="age-display">Age: 0</span>
+                    </div>
+                    <div class="pet-area">
+                        <div id="pet-sprite" class="pet"></div>
+                        <div id="reaction" class="reaction"></div>
+                        <div id="poop" class="poop hidden">💩</div>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-icon">🍔</span>
+                            <div class="stat-bar"><div class="stat-fill" id="hunger-bar"></div></div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">😊</span>
+                            <div class="stat-bar"><div class="stat-fill" id="happy-bar"></div></div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">💤</span>
+                            <div class="stat-bar"><div class="stat-fill" id="energy-bar"></div></div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">🧼</span>
+                            <div class="stat-bar"><div class="stat-fill" id="clean-bar"></div></div>
+                        </div>
+                    </div>
+                    <div id="mood-text" class="mood-text"></div>
+                </div>
+
+                <!-- Death screen -->
+                <div id="death-screen" class="screen-content hidden">
+                    <div class="death-icon">👻</div>
+                    <p id="death-message">Your pet has passed away...</p>
+                    <button id="restart-btn" class="pixel-btn">Try Again</button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="device-btn" id="btn-start" title="Start">▶</button>
+            <button class="device-btn" id="btn-feed" title="Feed" disabled>🍔</button>
+            <button class="device-btn" id="btn-play" title="Play" disabled>🎮</button>
+            <button class="device-btn" id="btn-sleep" title="Sleep" disabled>💤</button>
+            <button class="device-btn" id="btn-clean" title="Clean" disabled>🧹</button>
+            <button class="device-btn" id="btn-heal" title="Heal" disabled>💊</button>
+        </div>
+        <div class="button-labels">
+            <span>Start</span>
+            <span>Feed</span>
+            <span>Play</span>
+            <span>Sleep</span>
+            <span>Clean</span>
+            <span>Heal</span>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
