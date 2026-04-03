@@ -30,6 +30,7 @@
                 <div id="game-screen" class="screen-content hidden">
                     <div class="status-bar">
                         <span id="pet-name-display">Pet</span>
+                        <span id="stage-display">baby</span>
                         <span id="age-display">Age: 0</span>
                     </div>
                     <div class="pet-area">
@@ -37,23 +38,8 @@
                         <div id="reaction" class="reaction"></div>
                         <div id="poop" class="poop hidden">💩</div>
                     </div>
-                    <div class="stats">
-                        <div class="stat">
-                            <span class="stat-icon">🍔</span>
-                            <div class="stat-bar"><div class="stat-fill" id="hunger-bar"></div></div>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-icon">😊</span>
-                            <div class="stat-bar"><div class="stat-fill" id="happy-bar"></div></div>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-icon">💤</span>
-                            <div class="stat-bar"><div class="stat-fill" id="energy-bar"></div></div>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-icon">🧼</span>
-                            <div class="stat-bar"><div class="stat-fill" id="clean-bar"></div></div>
-                        </div>
+                    <div class="stats" id="stats-container">
+                        <!-- Stat bars are built dynamically by JS -->
                     </div>
                     <div id="mood-text" class="mood-text"></div>
                 </div>
@@ -67,20 +53,46 @@
             </div>
         </div>
         <div class="buttons">
-            <button class="device-btn" id="btn-start" title="Start">▶</button>
-            <button class="device-btn" id="btn-feed" title="Feed" disabled>🍔</button>
-            <button class="device-btn" id="btn-play" title="Play" disabled>🎮</button>
-            <button class="device-btn" id="btn-sleep" title="Sleep" disabled>💤</button>
-            <button class="device-btn" id="btn-clean" title="Clean" disabled>🧹</button>
-            <button class="device-btn" id="btn-heal" title="Heal" disabled>💊</button>
-        </div>
-        <div class="button-labels">
-            <span>Start</span>
-            <span>Feed</span>
-            <span>Play</span>
-            <span>Sleep</span>
-            <span>Clean</span>
-            <span>Heal</span>
+            <div class="button-row">
+                <div class="btn-group">
+                    <button class="device-btn" id="btn-start" title="Start">▶</button>
+                    <span class="btn-label">Start</span>
+                </div>
+                <div class="btn-group">
+                    <button class="device-btn" id="btn-feed" title="Feed" disabled>🍔</button>
+                    <span class="btn-label">Feed</span>
+                </div>
+                <div class="btn-group">
+                    <button class="device-btn" id="btn-play" title="Play" disabled>🎮</button>
+                    <span class="btn-label">Play</span>
+                </div>
+                <div class="btn-group">
+                    <button class="device-btn" id="btn-sleep" title="Sleep" disabled>💤</button>
+                    <span class="btn-label">Sleep</span>
+                </div>
+                <div class="btn-group">
+                    <button class="device-btn" id="btn-clean" title="Clean" disabled>🧹</button>
+                    <span class="btn-label">Clean</span>
+                </div>
+                <div class="btn-group">
+                    <button class="device-btn" id="btn-heal" title="Heal" disabled>💊</button>
+                    <span class="btn-label">Heal</span>
+                </div>
+            </div>
+            <div class="button-row">
+                <div class="btn-group hidden" id="btn-pet-group">
+                    <button class="device-btn evolution-btn" id="btn-pet" title="Pet" disabled>🤗</button>
+                    <span class="btn-label">Pet</span>
+                </div>
+                <div class="btn-group hidden" id="btn-study-group">
+                    <button class="device-btn evolution-btn" id="btn-study" title="Study" disabled>📚</button>
+                    <span class="btn-label">Study</span>
+                </div>
+                <div class="btn-group hidden" id="btn-train-group">
+                    <button class="device-btn evolution-btn" id="btn-train" title="Train" disabled>🏋️</button>
+                    <span class="btn-label">Train</span>
+                </div>
+            </div>
         </div>
     </div>
     <script src="game.js"></script>
