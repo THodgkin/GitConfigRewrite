@@ -26,10 +26,20 @@
                     <button id="confirm-name-btn" class="pixel-btn">OK</button>
                 </div>
 
+                <!-- Personality reveal screen -->
+                <div id="personality-screen" class="screen-content hidden">
+                    <div id="personality-sprite" class="personality-hatch">🐣</div>
+                    <p id="personality-name" class="personality-title"></p>
+                    <p id="personality-desc" class="personality-desc"></p>
+                    <p id="personality-bonus" class="personality-bonus"></p>
+                    <button id="personality-ok-btn" class="pixel-btn">Let's go!</button>
+                </div>
+
                 <!-- Game screen -->
                 <div id="game-screen" class="screen-content hidden">
                     <div class="status-bar">
                         <span id="pet-name-display">Pet</span>
+                        <span id="trait-badge" class="trait-badge"></span>
                         <span id="stage-display">baby</span>
                         <span id="age-display">Age: 0</span>
                     </div>
@@ -37,11 +47,23 @@
                         <div id="pet-sprite" class="pet"></div>
                         <div id="reaction" class="reaction"></div>
                         <div id="poop" class="poop hidden">💩</div>
+                        <div id="speech-bubble" class="speech-bubble hidden"></div>
                     </div>
-                    <div class="stats" id="stats-container">
-                        <!-- Stat bars are built dynamically by JS -->
-                    </div>
+                    <div class="stats" id="stats-container"></div>
                     <div id="mood-text" class="mood-text"></div>
+                </div>
+
+                <!-- Mini-game overlay -->
+                <div id="minigame-overlay" class="screen-content hidden">
+                    <div id="minigame-title" class="mg-title"></div>
+                    <div id="minigame-area" class="mg-area"></div>
+                    <div id="minigame-hud" class="mg-hud"></div>
+                </div>
+
+                <!-- Event overlay -->
+                <div id="event-overlay" class="event-overlay hidden">
+                    <div id="event-icon" class="event-icon"></div>
+                    <p id="event-text" class="event-text"></p>
                 </div>
 
                 <!-- Death screen -->
